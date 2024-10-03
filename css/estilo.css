@@ -1,0 +1,642 @@
+@charset "UTF-8";
+/* llamado a scss*/
+/* estilo de contactos y gps */
+.form {
+  background: linear-gradient(to bottom, #8b8b8b, rgba(240, 228, 255, 0.7450980392));
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* Contenedor del formulario */
+}
+.form .contenedor-formulario {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  animation: fadeIn 0.8s ease-in-out;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  /* Título del formulario */
+  /* Estilo de los campos */
+  /* Botón de enviar */
+}
+.form .contenedor-formulario .titulo-formulario {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.form .contenedor-formulario .campo {
+  margin-bottom: 20px;
+}
+.form .contenedor-formulario .campo label {
+  font-size: 14px;
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 5px;
+}
+.form .contenedor-formulario .campo .input-texto, .form .contenedor-formulario .campo .input-comentario {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease-in-out;
+}
+.form .contenedor-formulario .campo .input-texto:focus, .form .contenedor-formulario .campo .input-comentario:focus {
+  border-color: #3498db;
+  outline: none;
+}
+.form .contenedor-formulario .boton-enviar {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.form .contenedor-formulario .boton-enviar:hover {
+  background-color: #2980b9;
+}
+
+/* Animación del formulario al cargar */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* gps */
+/* Estilo para el título */
+.titulo-mapa {
+  text-align: center;
+  font-size: 2rem;
+  color: #0e1c36;
+  margin-top: 20px;
+}
+
+/* Estilo del iframe (mapa) */
+.mapa-embed {
+  width: 90%;
+  height: 450px;
+  border: 5px solid #9482c5;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+/* Media Query para pantallas más pequeñas reponsivos generales */
+@media (max-width: 480px) {
+  .contenedor-formulario {
+    padding: 20px;
+  }
+  .titulo-formulario {
+    font-size: 20px;
+  }
+  .mapa-embed {
+    height: 250px;
+  }
+}
+/* estilo de ofertas */
+.ofertas {
+  margin: 2% 5%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+  grid-template-rows: auto; /* 5 filas dinámicas */
+  grid-template-areas: "titulo_o titulo_o titulo_o titulo_o titulo_o" "oferta-destacada oferta-destacada oferta-destacada oferta-destacada oferta-destacada" "oferta_1 oferta_2 oferta_3 oferta_4 oferta_5" "oferta_6 oferta_7 oferta_8 oferta_9 oferta_10" "oferta_11 oferta_12 oferta_13 oferta_14 oferta_15";
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.ofertas .oferta-destacada {
+  grid-area: oferta-destacada;
+}
+.ofertas .oferta-destacada img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ajusta la imagen para que se vea completa, si es más grande que el contenedor */
+}
+.ofertas .oferta_1 img, .ofertas .oferta_2 img, .ofertas .oferta_3 img, .ofertas .oferta_4 img, .ofertas .oferta_5 img,
+.ofertas .oferta_6 img, .ofertas .oferta_7 img, .ofertas .oferta_8 img, .ofertas .oferta_9 img, .ofertas .oferta_10 img,
+.ofertas .oferta_11 img, .ofertas .oferta_12 img, .ofertas .oferta_13 img, .ofertas .oferta_14 img, .ofertas .oferta_15 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ajusta la imagen para que se vea completa, si es más grande que el contenedor */
+}
+.ofertas .oferta_1 p, .ofertas .oferta_2 p, .ofertas .oferta_3 p, .ofertas .oferta_4 p, .ofertas .oferta_5 p,
+.ofertas .oferta_6 p, .ofertas .oferta_7 p, .ofertas .oferta_8 p, .ofertas .oferta_9 p, .ofertas .oferta_10 p,
+.ofertas .oferta_11 p, .ofertas .oferta_12 p, .ofertas .oferta_13 p, .ofertas .oferta_14 p, .ofertas .oferta_15 p {
+  font-size: 1rem;
+  margin: 10px 0; /* Margen para el párrafo */
+}
+.ofertas .titulo_o {
+  grid-area: titulo_o; /* nombramos a todas las áreas para ubicarlas con grid */
+  font-family: "Bungee Tint", sans-serif;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 4rem;
+}
+
+/* Media Query para pantallas más pequeñas reponsivos generales */
+@media (max-width: 480px) {
+  .ofertas {
+    grid-template-columns: 1fr; /* Una columna para pantallas móviles */
+    grid-template-areas: "titulo_o" "oferta-destacada" "oferta_1" "oferta_2" "oferta_3" "oferta_4" "oferta_5" "oferta_6" "oferta_7" "oferta_8" "oferta_9" "oferta_10" "oferta_11" "oferta_12" "oferta_13" "oferta_14" "oferta_15";
+  }
+  /* Centramos el texto y botones en móviles */
+  .articulo {
+    text-align: center;
+  }
+  .articulos_1, .articulos_2, .articulos_3,
+  .articulos_4, .articulos_5, .articulos_6 {
+    height: auto; /* Permite que la altura se ajuste al contenido */
+  }
+  h2 a {
+    font-size: 2rem;
+  }
+}
+/* Sección de favoritos */
+.contenedor-main-favoritos {
+  background: linear-gradient(to bottom, #8b8b8b, rgba(240, 228, 255, 0.7450980392));
+  padding-bottom: 20px;
+}
+.contenedor-main-favoritos .banner-favoritos {
+  width: 100%;
+  overflow: hidden; /* evita que la imagen desborde el contenedor */
+}
+.contenedor-main-favoritos .banner-favoritos img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.contenedor-main-favoritos .articulo-favoritos {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  flex-wrap: wrap;
+}
+.contenedor-main-favoritos .articulo-favoritos .imagen-articulo {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.contenedor-main-favoritos .articulo-favoritos .detalles-articulo {
+  flex: 1;
+  margin-left: 20px;
+  min-width: 150px; /* Asegura que haya un ancho mínimo */
+}
+.contenedor-main-favoritos .articulo-favoritos .detalles-articulo .nombre-articulo {
+  font-size: 1.5em;
+  color: #333;
+}
+.contenedor-main-favoritos .articulo-favoritos .detalles-articulo .precio-articulo {
+  font-size: 1.2em;
+  color: #888;
+}
+.contenedor-main-favoritos .articulo-favoritos .acciones-articulo {
+  display: flex;
+  flex-direction: column; /* Coloca los botones en columna */
+  gap: 5px; /* Espacio entre los botones */
+}
+.contenedor-main-favoritos .articulo-favoritos .acciones-articulo .boton-comprar, .contenedor-main-favoritos .articulo-favoritos .acciones-articulo .boton-eliminar {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+.contenedor-main-favoritos .articulo-favoritos .acciones-articulo .boton-comprar {
+  background-color: rgba(0, 15, 56, 0.6156862745);
+  color: #fff;
+}
+.contenedor-main-favoritos .articulo-favoritos .acciones-articulo .boton-eliminar {
+  background-color: rgba(122, 42, 52, 0.8);
+  color: #fff;
+}
+
+/* página de preguntas frecuentes */
+.faq {
+  padding: 20px;
+  background: linear-gradient(to bottom, #8b8b8b, rgba(240, 228, 255, 0.7450980392));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.faq .titulo-faq {
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.faq .contenedor-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.faq .contenedor-faq .item-faq {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  border-radius: 5px 50px 5px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.faq .contenedor-faq .item-faq i {
+  font-size: 28px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+.faq .contenedor-faq .item-faq h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #292929;
+}
+.faq .contenedor-faq .item-faq p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+/* configuracion por defecto general */
+/* ordenado de nav a footer y al final los medias queries de todas las paginas identificadas por nombre segun paginas y clases */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h3 {
+  font-family: "Kanit", sans-serif;
+}
+
+/* estilo barra de navegacion */
+li {
+  display: inline-block;
+  margin: 10px;
+}
+
+#btn {
+  background-color: #131418;
+}
+
+/* Estilo portada */
+.portada {
+  position: relative; /* Necesario para que el pseudo-elemento ::before se posicione correctamente */
+  background-image: url("../img/portada.jpg"); /* Imagen de fondo para la portada */
+  background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+  background-position: center; /* Centra la imagen en el contenedor */
+  height: 50rem; /* Altura del contenedor */
+  width: 100%; /* Ancho del contenedor */
+}
+.portada::before {
+  content: ""; /* Crea un pseudo-elemento vacío */
+  position: absolute; /* Posiciona el pseudo-elemento en relación al contenedor .portada */
+  top: 0; /* Ubica el pseudo-elemento en la parte superior del contenedor */
+  left: 0; /* Ubica el pseudo-elemento a la izquierda del contenedor */
+  width: 100%; /* Ancho completo del contenedor */
+  height: 100%; /* Altura completa del contenedor */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)); /* Degradado de negro con opacidad a transparente, de arriba hacia abajo */
+  pointer-events: none; /* Permite que los clics pasen a través del pseudo-elemento */
+  z-index: 1; /* Asegura que el gradiente esté sobre la imagen de fondo */
+}
+.portada h1 {
+  color: #fff; /* Color del texto */
+  font-size: 8rem; /* Tamaño del texto */
+  text-align: center; /* Centra el texto horizontalmente */
+  padding-top: 10%; /* Espacio superior para centrar el texto verticalmente */
+  position: relative; /* Asegura que el texto esté posicionado sobre el pseudo-elemento */
+  z-index: 2; /* Asegura que el texto esté por encima del gradiente */
+}
+
+/* Estilo de la sección de productos */
+.titulo_categorias {
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.Productos {
+  background-image: url("../img/fondo_c.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Fija el fondo en su lugar */
+  text-align: center;
+  /* Contenedor de tarjetas */
+  /* Tarjetas */
+  /* Imagen en tarjetas */
+}
+.Productos .categorias {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre tarjetas */
+  padding: 20px;
+  margin: auto; /* Centra el contenido */
+}
+.Productos .tarjetas {
+  display: flex;
+  flex-direction: column; /* Para que la imagen y el contenido estén en columna */
+  align-items: center; /* Centra el contenido dentro de la tarjeta */
+  border-radius: 10px;
+  box-shadow: 0 0 3px 2px #fff;
+  background: linear-gradient(#fff, rgba(255, 255, 255, 0.6117647059));
+  margin: 10px;
+  padding: 10px;
+  max-width: 300px; /* Limita el ancho de cada tarjeta */
+  text-align: center;
+  /* Efecto hover en tarjeta */
+}
+.Productos .tarjetas:hover {
+  box-shadow: 0 0 5px 2px black;
+}
+.Productos img {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* separador hr */
+.separador {
+  border: none; /* Elimina el estilo por defecto */
+  height: 2px; /* Altura de la línea */
+  background-color: #000; /* Color de la línea */
+  width: 80%; /* Ancho inicial de la línea */
+  margin: 15px auto; /* Centrar horizontalmente */
+}
+
+/* Sección de descripción general */
+.descripcion-seccion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  /* Contenedor de cada bloque */
+}
+.descripcion-seccion .descripcion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%; /*para regular el tamaño del div */
+  margin: 20px 0;
+  text-align: center;
+  /* Estilo del contenido */
+}
+.descripcion-seccion .descripcion-container .descripcion-contenido h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+}
+.descripcion-seccion .descripcion-container .descripcion-contenido p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+.descripcion-seccion .descripcion-container .descripcion-icono i {
+  font-size: 50px;
+  color: #151f49;
+  margin-bottom: 15px;
+}
+
+/* Estilos para la sección de ofertas */
+.titulo_ofertas {
+  font-family: "Bungee Tint", sans-serif;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 4rem;
+}
+.titulo_ofertas a {
+  text-decoration: none;
+}
+
+.article_ofertas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+  grid-template-rows: auto;
+  gap: 50px;
+  padding: 20px;
+  grid-template-areas: "articulo1 articulo1 articulo2" "articulo1 articulo1 articulo3" "articulo4 articulo5 articulo6";
+}
+
+/* áreas para cada artículo */
+.articulos_1 {
+  grid-area: articulo1;
+}
+
+.articulos_2 {
+  grid-area: articulo2;
+}
+
+.articulos_3 {
+  grid-area: articulo3;
+}
+
+.articulos_4 {
+  grid-area: articulo4;
+}
+
+.articulos_5 {
+  grid-area: articulo5;
+}
+
+.articulos_6 {
+  grid-area: articulo6;
+}
+
+.articulos_7 {
+  grid-area: articulo7;
+}
+
+/* Estilos generales para los artículos */
+.articulos_1,
+.articulos_2,
+.articulos_3,
+.articulos_4,
+.articulos_5,
+.articulos_6 {
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex; /* Usar flexbox para manejar contenido */
+  flex-direction: column; /* Colocar contenido en columna */
+  justify-content: space-between; /* Espacia el contenido */
+  height: 100%; /* Asegura que todos los artículos tengan la misma altura */
+}
+
+.articulos_1 img {
+  width: 100%;
+  height: 800px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.articulos_2 img,
+.articulos_3 img,
+.articulos_4 img,
+.articulos_5 img,
+.articulos_6 img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.descripcion_ofertas {
+  font-family: "Nunito", sans-serif; /* Variable tipografía */
+  font-size: 1rem;
+  text-align: center;
+}
+
+.btn_ver {
+  margin-top: 10px;
+  padding: 10px 20px;
+  width: 100%;
+  background-color: rgba(0, 15, 56, 0.6156862745);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn_ver:hover {
+  background-color: #151f49;
+}
+
+/* estilo de footer */
+/* Estilo general para el pie de página */
+.pie-pagina {
+  background: linear-gradient(to bottom, rgb(174, 175, 194), rgb(43, 43, 43)); /* Degradado de arriba hacia abajo */
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Redes sociales */
+.redes-sociales {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+  /* Estilo para los enlaces de redes sociales */
+}
+.redes-sociales .enlace-red {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+.redes-sociales .enlace-red i {
+  margin-right: 8px;
+}
+.redes-sociales .enlace-red:hover {
+  color: #3498db; /* Cambio de color al pasar el ratón */
+}
+
+/* Información adicional */
+.informacion p {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+/* Lista de enlaces */
+.lista-enlaces {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  /* Enlaces del pie de página */
+}
+.lista-enlaces .enlace-footer {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.lista-enlaces .enlace-footer:hover {
+  color: #3498db;
+}
+
+/* Media Query para pantallas más pequeñas reponsivos generales */
+@media (max-width: 480px) {
+  .categorias {
+    justify-content: center; /* Centra las tarjetas en pantallas pequeñas */
+  }
+  .tarjetas {
+    max-width: 90%; /* Aumenta el ancho máximo en pantallas pequeñas */
+  }
+  .titulo_categorias {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+  /* fin de categorias */
+  /* reponsivo separador */
+  .separador {
+    width: 70%; /* Ajusta el ancho en pantallas pequeñas */
+  }
+  /* fin de separador */
+  /*reponsivo section iconos */
+  .descripcion-seccion {
+    flex-direction: column;
+    align-items: center;
+    width: 90%; /* Hacemos que cada contenedor ocupe casi todo el ancho de la pantalla */
+  }
+  .descripcion-seccion .descripcion-container {
+    width: 100%; /* Ajusta el ancho en pantallas pequeñas */
+    margin-bottom: 20px;
+  }
+  .descripcion-seccion .descripcion-container .descripcion p {
+    width: 100%;
+  }
+  /* fin de section iconos */
+  /* reponsivo section ofertas */
+  .article_ofertas {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    grid-template-areas: "articulo1" "articulo2" "articulo3" "articulo4" "articulo5" "articulo6" "articulo7";
+  }
+  /* pie de pagina (footer) */
+  .pie-pagina {
+    flex-direction: column;
+  }
+  .redes-sociales {
+    margin-bottom: 30px;
+  }
+}
+
+/*# sourceMappingURL=estilo.css.map */

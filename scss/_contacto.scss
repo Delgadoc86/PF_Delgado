@@ -1,0 +1,126 @@
+@use "variables" as *;
+
+/* estilo de contactos y gps */
+
+.form {
+    background: linear-gradient(to bottom, $color_gradient1, $color_gradient2);
+    font-family: $letra_titulos; // variable tipografía
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    /* Contenedor del formulario */
+    .contenedor-formulario {
+        background-color: $color_fondo-txt;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        animation: fadeIn 0.8s ease-in-out;
+        margin-top: 3rem; // Añade espacio arriba
+        margin-bottom: 3rem; // Añade espacio abajo
+
+        /* Título del formulario */
+        .titulo-formulario {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Estilo de los campos */
+        .campo {
+            margin-bottom: 20px;
+
+            label {
+                font-size: 14px;
+                color: #2c3e50;
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .input-texto, .input-comentario {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 14px;
+                transition: border-color 0.3s ease-in-out;
+
+                &:focus {
+                    border-color: #3498db;
+                    outline: none;
+                }
+            }
+        }
+
+        /* Botón de enviar */
+        .boton-enviar {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #2980b9;
+            }
+        }
+    }
+}
+
+
+/* Animación del formulario al cargar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* gps */
+/* Estilo para el título */
+.titulo-mapa {
+    text-align: center;
+    font-size: 2rem;
+    color: #0e1c36;
+    margin-top: 20px;
+}
+
+/* Estilo del iframe (mapa) */
+.mapa-embed {
+    width: 90%;
+    height: 450px;
+    border: 5px solid #9482c5; 
+    border-radius: 10px; 
+    display: block;
+    margin: 0 auto; 
+    margin-bottom: 3rem;
+}
+
+/* Media Query para pantallas más pequeñas reponsivos generales */
+@media (max-width: 480px) {
+    .contenedor-formulario {
+        padding: 20px;
+    }
+
+    .titulo-formulario {
+        font-size: 20px;
+    }
+    .mapa-embed {
+        height: 250px;
+    }
+    
+}

@@ -1,0 +1,411 @@
+
+
+/* llamado a scss*/
+@use "variables" as *;
+@use "contacto";
+@use "ofertas";
+@use "favoritos";
+@use "preguntas";
+
+
+/* configuracion por defecto general */
+/* ordenado de nav a footer y al final los medias queries de todas las paginas identificadas por nombre segun paginas y clases */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h3{
+    font-family: "Kanit", sans-serif;
+    
+}
+/* estilo barra de navegacion */
+li {
+    display: inline-block; 
+    margin: 10px; 
+}
+#btn{
+    background-color: #131418;
+}
+
+/* Estilo portada */
+.portada {
+    position: relative; /* Necesario para que el pseudo-elemento ::before se posicione correctamente */
+    background-image: url("../img/portada.jpg"); /* Imagen de fondo para la portada */
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    height: 50rem; /* Altura del contenedor */
+    width: 100%; /* Ancho del contenedor */
+
+    &::before {
+        content: ""; /* Crea un pseudo-elemento vacío */
+        position: absolute; /* Posiciona el pseudo-elemento en relación al contenedor .portada */
+        top: 0; /* Ubica el pseudo-elemento en la parte superior del contenedor */
+        left: 0; /* Ubica el pseudo-elemento a la izquierda del contenedor */
+        width: 100%; /* Ancho completo del contenedor */
+        height: 100%; /* Altura completa del contenedor */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)); /* Degradado de negro con opacidad a transparente, de arriba hacia abajo */
+        pointer-events: none; /* Permite que los clics pasen a través del pseudo-elemento */
+        z-index: 1; /* Asegura que el gradiente esté sobre la imagen de fondo */
+    }
+
+    h1 {
+        color: $color_fondo-txt; /* Color del texto */
+        font-size: 8rem; /* Tamaño del texto */
+        text-align: center; /* Centra el texto horizontalmente */
+        padding-top: 10%; /* Espacio superior para centrar el texto verticalmente */
+        position: relative; /* Asegura que el texto esté posicionado sobre el pseudo-elemento */
+        z-index: 2; /* Asegura que el texto esté por encima del gradiente */
+    }
+}
+
+/* Estilo de la sección de productos */
+.titulo_categorias {
+    font-family: $letra_titulos;
+    color: $color_fondo-txt;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+.Productos {
+    background-image: url("../img/fondo_c.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fija el fondo en su lugar */
+    text-align: center;
+
+    /* Contenedor de tarjetas */
+    .categorias {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px; /* Espacio entre tarjetas */
+        padding: 20px;
+        margin: auto; /* Centra el contenido */
+    }
+
+    /* Tarjetas */
+    .tarjetas {
+        display: flex;
+        flex-direction: column; /* Para que la imagen y el contenido estén en columna */
+        align-items: center; /* Centra el contenido dentro de la tarjeta */
+        border-radius: 10px;
+        box-shadow: 0 0 3px 2px $color_fondo-txt;
+        background: linear-gradient($color_fondo-txt, #ffffff9c);
+        margin: 10px;
+        padding: 10px;
+        max-width: 300px; /* Limita el ancho de cada tarjeta */
+        text-align: center;
+
+        /* Efecto hover en tarjeta */
+        &:hover {
+            box-shadow: 0 0 5px 2px black;
+        }
+    }
+
+    /* Imagen en tarjetas */
+    img {
+        width: 100%;
+        border-radius: 10px;
+        max-height: 200px;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* separador hr */
+.separador {
+    border: none; /* Elimina el estilo por defecto */
+    height: 2px; /* Altura de la línea */
+    background-color: #000; /* Color de la línea */
+    width: 80%; /* Ancho inicial de la línea */
+    margin: 15px auto; /* Centrar horizontalmente */
+}
+
+/* Sección de descripción general */
+.descripcion-seccion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+
+    /* Contenedor de cada bloque */
+ .descripcion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%; /*para regular el tamaño del div */
+    margin: 20px 0;
+    text-align: center; 
+
+        /* Estilo del contenido */
+        .descripcion-contenido{
+
+             
+            h2 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 15px;
+            }
+        
+            p {
+            font-family: "Nunito", sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #666;
+            }
+
+        }
+
+        .descripcion-icono {
+
+            i {
+                font-size: 50px;
+                color: #151f49;
+                margin-bottom: 15px;
+            }
+
+        }
+ 
+    }
+}
+
+ 
+
+/* Estilos para la sección de ofertas */
+.titulo_ofertas {
+    font-family: $letra_ofertas;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 4rem;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.article_ofertas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    grid-template-rows: auto;
+    gap: 50px;
+    padding: 20px;
+    grid-template-areas: 
+        "articulo1 articulo1 articulo2"
+        "articulo1 articulo1 articulo3"
+        "articulo4 articulo5 articulo6";
+}
+
+/* áreas para cada artículo */
+.articulos_1 {
+    grid-area: articulo1;
+}
+.articulos_2 {
+    grid-area: articulo2;
+}
+.articulos_3 {
+    grid-area: articulo3;
+}
+.articulos_4 {
+    grid-area: articulo4;
+}
+.articulos_5 {
+    grid-area: articulo5;
+}
+.articulos_6 {
+    grid-area: articulo6;
+}
+.articulos_7 {
+    grid-area: articulo7;
+}
+
+/* Estilos generales para los artículos */
+.articulos_1, 
+.articulos_2, 
+.articulos_3, 
+.articulos_4, 
+.articulos_5, 
+.articulos_6 {
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex; /* Usar flexbox para manejar contenido */
+    flex-direction: column; /* Colocar contenido en columna */
+    justify-content: space-between; /* Espacia el contenido */
+    height: 100%; /* Asegura que todos los artículos tengan la misma altura */
+}
+
+.articulos_1 img {
+    width: 100%;
+    height: 800px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.articulos_2 img, 
+.articulos_3 img, 
+.articulos_4 img, 
+.articulos_5 img, 
+.articulos_6 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;    
+}
+
+.descripcion_ofertas {
+    font-family: $letra_titulos; /* Variable tipografía */
+    font-size: 1rem;
+    text-align: center;
+}
+
+.btn_ver {
+    margin-top: 10px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #000f389d;
+    color: $color_fondo-txt;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #151f49;
+    }
+}
+
+/* estilo de footer */
+/* Estilo general para el pie de página */
+.pie-pagina {
+    background: linear-gradient(to bottom, rgb(174, 175, 194), rgb(43, 43, 43)); /* Degradado de arriba hacia abajo */
+    color: $color_fondo-txt;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Redes sociales */
+.redes-sociales {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    /* Estilo para los enlaces de redes sociales */
+    .enlace-red {
+        color: $color_fondo-txt;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s ease;
+
+        i {
+            margin-right: 8px;
+        }
+
+        &:hover {
+            color: #3498db; /* Cambio de color al pasar el ratón */
+        }
+    }
+}
+
+/* Información adicional */
+.informacion p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+/* Lista de enlaces */
+.lista-enlaces {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+    /* Enlaces del pie de página */
+    .enlace-footer {
+        color: $color_fondo-txt;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #3498db;
+        }
+    }
+}
+
+
+/* Media Query para pantallas más pequeñas reponsivos generales */
+@media (max-width: 480px) {
+    .categorias {
+        justify-content: center; /* Centra las tarjetas en pantallas pequeñas */
+    }
+
+    .tarjetas {
+        max-width: 90%; /* Aumenta el ancho máximo en pantallas pequeñas */
+    }
+    .titulo_categorias{
+        font-size: 3rem;
+        font-weight: 900;
+    }
+    /* fin de categorias */
+    
+    /* reponsivo separador */
+    .separador {
+        width: 70%; /* Ajusta el ancho en pantallas pequeñas */
+    }
+    /* fin de separador */
+
+    /*reponsivo section iconos */
+    .descripcion-seccion{   //reviasar
+        flex-direction: column;
+        align-items: center;
+        width: 90%; /* Hacemos que cada contenedor ocupe casi todo el ancho de la pantalla */
+    
+    .descripcion-container{
+        width: 100%; /* Ajusta el ancho en pantallas pequeñas */
+        margin-bottom: 20px;
+
+     .descripcion p{
+        width: 100%;
+        }
+
+     }
+    }
+    /* fin de section iconos */
+
+    /* reponsivo section ofertas */
+    .article_ofertas {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        grid-template-areas: 
+            "articulo1"
+            "articulo2"
+            "articulo3"
+            "articulo4"
+            "articulo5"
+            "articulo6"
+            "articulo7";
+    }
+
+    /* pie de pagina (footer) */
+    .pie-pagina {
+        flex-direction: column;
+    }
+
+    .redes-sociales {
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <!-- metedatos descripcion y keywords -->
+    <meta name="description" content="Gestiona tus prendas favoritas en Modo Urban. Añádelas al carrito, revisa precios y compra las mejores ofertas en moda urbana. ¡No pierdas de vista tus artículos preferidos!">
+    <meta name="keywords" content="favoritos, moda urbana, guardar prendas, carrito de compras, ropa urbana, comprar ropa online, ofertas de moda, buzo, jean, camisa, tienda de ropa online">
+    <!-- link Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--link animaciones AOS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- link de font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- titulo y favicon -->
+    <link rel="icon" href="../img/modo.png" type="image/png" sizes="32x32">
+    <title>Favoritos - Modo Urban</title>
+</head>
+<body>
+    <!-- barra de navegacion -->
+    <!-- aplicamos bootstrap en la barra de navegacion  -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark"  data-bs-theme="dark">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img src="../img/modo.png" alt="Logo" style="height: 60px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ofertas.html">Ofertas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="favoritos.html">Favoritos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="preguntas.html">Preguntas</a>
+                </li>
+                </ul>
+                <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button id="btn" class="btn btn-primary" type="submit">Buscar</button>
+                </form>
+            </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- cuerpo principal -->
+    
+    <main class="contenedor-main-favoritos">
+
+        <div class="banner-favoritos">
+            <img src="../img/Banner_favoritos.png" alt="banner favoritos">
+        </div>
+        
+        <div class="contenedor-favoritos" data-aos="flip-down">
+            <div class="articulo-favoritos">
+                <img src="../img/buzo1.jpg" alt="Artículo 1" class="imagen-articulo">
+                <div class="detalles-articulo">
+                    <h2 class="nombre-articulo">Buzo</h2>
+                    <p class="precio-articulo">$129.000</p>
+                </div>
+                <div class="acciones-articulo">
+                    <button class="boton-comprar">Comprar</button>
+                    <button class="boton-eliminar">Eliminar</button>
+                </div>
+            </div>
+    
+            <div class="articulo-favoritos" data-aos="flip-down">
+                <img src="../img/camisa1.jpg" alt="Artículo 2" class="imagen-articulo">
+                <div class="detalles-articulo">
+                    <h2 class="nombre-articulo">Camisa</h2>
+                    <p class="precio-articulo">$120.000</p>
+                </div>
+                <div class="acciones-articulo">
+                    <button class="boton-comprar">Comprar</button>
+                    <button class="boton-eliminar">Eliminar</button>
+                </div>
+            </div>
+
+            <div class="articulo-favoritos" data-aos="flip-down">
+                <img src="../img/jean1.jpg" alt="Artículo 2" class="imagen-articulo">
+                <div class="detalles-articulo">
+                    <h2 class="nombre-articulo">Jean</h2>
+                    <p class="precio-articulo">$90.000</p>
+                </div>
+                <div class="acciones-articulo">
+                    <button class="boton-comprar">Comprar</button>
+                    <button class="boton-eliminar">Eliminar</button>
+                </div>
+            </div>
+
+            <div class="articulo-favoritos" data-aos="flip-down">
+                <img src="../img/jeanM.jpg" alt="Artículo 2" class="imagen-articulo">
+                <div class="detalles-articulo">
+                    <h2 class="nombre-articulo">Jean</h2>
+                    <p class="precio-articulo">$110.000</p>
+                </div>
+                <div class="acciones-articulo">
+                    <button class="boton-comprar">Comprar</button>
+                    <button class="boton-eliminar">Eliminar</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!--footer -->
+    <footer class="pie-pagina">
+        <div class="redes-sociales">
+            <!-- enlaces a redes sociales con iconos -->
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" class="enlace-red"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="enlace-red"><i class="fa-brands fa-x-twitter"></i>X</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" class="enlace-red"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+        <div class="informacion">
+            <p>&copy;Modo Urban 2024. Todos los derechos reservados.</p>
+            <ul class="lista-enlaces">
+                <li><a href="../html/contacto.html" class="enlace-footer"><i class="fa-solid fa-address-book"></i> Contacto</a></li>
+                <li><a href="../html/preguntas.html" class="enlace-footer"><i class="fa-solid fa-question"></i> Preguntas Frecuentes</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- js animacion -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init();</script>
+    
+    <!-- script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

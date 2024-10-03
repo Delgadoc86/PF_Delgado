@@ -1,0 +1,269 @@
+
+<!-- Web dedicada a la venta de ropa, donde se espera tener usuarios que puedan guardar sus prendas favoritas, almacernarlas en un carrito y pagar -->
+<!-- PAGINA PRICIPAL -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <!-- metedatos descripcion y keywords -->
+    <meta name="description" content="Descubre las últimas tendencias en ropa urbana para hombre, mujer y niños. Guarda tus prendas favoritas, añádelas al carrito y disfruta de envíos rápidos a precios accesibles.">
+    <meta name="keywords" content="ropa urbana, moda juvenil, ropa hombre, ropa mujer, ropa niños, tienda de ropa online, envíos rápidos, precios accesibles, carrito de compras, moda casual, ropa moderna">
+    <!-- link Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- link de font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
+    <!-- titulo y favicon -->
+    <link rel="icon" href="img/modo.png" type="image/png" sizes="32x32">
+    <title>Modo Urban</title>
+</head>
+<body>
+    <!-- aplicamos bootstrap en la barra de navegacion  -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark"  data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="img/modo.png" alt="Logo" style="height: 60px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html/ofertas.html">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html/contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html/favoritos.html">Favoritos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html/preguntas.html">Preguntas</a>
+                    </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button id="btn" class="btn btn-primary" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>    
+    
+    <!-- contenido principal  -->
+    <main>
+        <!-- banner principal -->
+        <section class="portada">
+            <h1>Modo Urban</h1> 
+        </section>
+
+        <!-- separador -->
+        <hr class="separador">
+
+        <!-- section de productos -->
+        <section class="Productos">
+            
+            <h2 class="titulo_categorias">CATEGORIAS</h2>
+            <article class="categorias">
+                <!-- categoria 1 -->
+                <div class="tarjetas">
+                    <img src="img/imgM.jpg" alt="Ropa Mujer"> 
+                    <div>
+                        <h3>Mujer</h3> 
+                        <p>todo para ellas</p> 
+                        <button class="btn_ver" type="button">VER</button> 
+                    </div>
+                </div>
+                
+                <!-- categoria 2 -->
+                <div class="tarjetas">
+                    <img src="img/imgH.jpg" alt="Ropa Hombre"> 
+                    <div>
+                        <h3>Hombre</h3> 
+                        <p>todo para ellos</p> 
+                        <button class="btn_ver" type="button">VER</button> 
+                    </div>
+                </div>
+                <!-- categoria 3-->
+                <div class="tarjetas">
+                    <img src="img/imgNiños.jpg" alt="Ropa Niños"> 
+                    <div>
+                        <h3>Niños</h3> 
+                        <p>todo para los peques</p> 
+                        <button class="btn_ver" type="button">VER</button> 
+                    </div>
+                </div>    
+                
+            </article>
+            
+           
+        </section>
+
+        <!-- separador -->
+        <hr class="separador">              
+
+        <!-- Link para Font Awesome -->
+
+        <section class="descripcion-seccion">
+            <div class="descripcion-container">
+                <div class="descripcion-icono">
+                    <i class="fas fa-store"></i> <!-- link de iconos de font awesome-->
+                </div>
+                <div class="descripcion-contenido">
+                    <h2>Tienda Moderna</h2>
+                    <p>Encuentra las últimas tendencias en ropa urbana, con estilos que destacan y marcan la diferencia.</p>
+                </div>
+            </div>
+
+            <div class="descripcion-container">
+                <div class="descripcion-icono">
+                    <i class="fas fa-user-friends"></i>
+                </div>
+                <div class="descripcion-contenido">
+                    <h2>Dirigido a Jóvenes</h2>
+                    <p>Nuestro público principal son los jóvenes con un estilo único y una actitud moderna y fresca.</p>
+                </div>
+            </div>
+
+            <div class="descripcion-container">
+                <div class="descripcion-icono">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <div class="descripcion-contenido">
+                    <h2>Estilo Urbano</h2>
+                    <p>Ofrecemos prendas casuales y modernas, perfectas para tu día a día sin perder el estilo.</p>
+                </div>
+            </div>
+
+            <div class="descripcion-container">
+                <div class="descripcion-icono">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <div class="descripcion-contenido">
+                    <h2>Envíos Rápidos</h2>
+                    <p>Tu pedido llegará en tiempo récord, asegurando que siempre estés a la moda.</p>
+                </div>
+            </div>
+
+            <div class="descripcion-container">
+                <div class="descripcion-icono">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="descripcion-contenido">
+                    <h2>Precios Accesibles</h2>
+                    <p>Calidad y estilo no tienen por qué ser costosos. Ofrecemos ropa urbana a precios competitivos.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- separador -->
+        <hr class="separador">
+
+        <!-- section de ofertas especiales -->
+        <section class="Ofertas">
+            <h2 class="titulo_ofertas"><a href="html/ofertas.html">Ofertas Especiales</a></h2> 
+            <article class="article_ofertas">
+                <!-- primera oferta -->
+                <div class="articulos_1">
+                    <img src="img/remeraH.jpg" alt="Oferta 1"> 
+                    <div>
+                        <h3>Remera</h3> 
+                        <p class="descripcion_ofertas">
+                            Material: 100% algodón
+                            Corte: Ajustado con comodidad
+                            Colores disponibles: (Agregar colores)
+                            Tallas: S, M, L, XL
+                            Fácil de combinar con jeans, shorts
+                            ¡No te quedes sin la tuya!</p> 
+                        <button class="btn_ver" type="button">Agregar al Carrito</button> 
+                    </div>
+                </div>
+        
+                <!-- segunda oferta-->
+                <div class="articulos_2">
+                    <img src="img/buzoH.jpg" alt="Oferta 2"> 
+                    <div>
+                        <h3>Buzo</h3> 
+                        <p class="descripcion_ofertas">Buzo de hombre, confeccionado en suave algodón. Diseño moderno y cómodo, ideal para días frescos. Disponible en varios colores y tallas (M, L, XL).</p>
+                        <button class="btn_ver" type="button">Agregar a Favoritos</button> 
+                    </div>
+                </div>
+
+                <!-- tercera oferta -->
+                <div class="articulos_3">
+                    <img src="img/jeanM.jpg" alt="Oferta 3"> 
+                    <div>
+                        <h3>Jean</h3> 
+                        <p class="descripcion_ofertas">Jean de mujer, corte ajustado y cómodo. Confeccionado en denim elástico que se adapta a tu figura. Disponible en varios tonos y tallas (36, 38, 40, 42).</p> 
+                        <button class="btn_ver" type="button">Agregar a Favoritos</button> 
+                    </div>
+                </div>
+
+                <!-- cuarta oferta -->
+                <div class="articulos_4">
+                    <img src="img/zapatillasH.jpg" alt="Oferta 4"> 
+                    <div>
+                        <h3>Zapatillas</h3> 
+                        <p class="descripcion_ofertas">Zapatillas Nike, cómodas y con gran amortiguación. Disponibles en varios colores y tallas (40-45). Ideales para entrenar o usar a diario. ¡Luce tu estilo!</p> 
+                        <button class="btn_ver" type="button">Agregar a Favoritos</button> 
+                    </div>
+                </div>
+
+                <!-- quitan oferta -->
+                <div class="articulos_5">
+                    <img src="img/bermudaM.jpg" alt="Oferta 5"> 
+                    <div>
+                        <h3>Bermudas</h3> 
+                        <p class="descripcion_ofertas">Bermuda de mujer, ligera y cómoda. Ideal para el verano, <br> con ajuste perfecto y disponible en varios colores y tallas. <br> ¡Perfecta para tus días de sol!</p> 
+                        <button class="btn_ver" type="button">Agregar a Favoritos</button> 
+                    </div>
+                </div>
+
+                <!-- sexta oferta -->
+                <div class="articulos_6">
+                    <img src="img/camisaH.jpg" alt="Oferta 6"> 
+                    <div>
+                        <h3>Camisa</h3> 
+                        <p class="descripcion_ofertas">Camisas de hombre, confeccionadas en algodón suave. Diseño elegante y casual, perfectas para cualquier ocasión. Disponibles en varios colores y tallas (M, L, XL).</p> 
+                        <button class="btn_ver" type="button">Agregar a Favoritos</button> 
+                    </div>
+                </div>
+               
+            </article>
+        </section>
+    </main>
+
+    <!--footer -->
+    <footer class="pie-pagina">
+        <div class="redes-sociales">
+            <!-- enlaces a redes sociales con iconos -->
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" class="enlace-red"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="enlace-red"><i class="fa-brands fa-x-twitter"></i>Twitter</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" class="enlace-red"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+        <div class="informacion">
+            <p>&copy;Modo Urban 2024. Todos los derechos reservados.</p>
+            <ul class="lista-enlaces">
+                <li><a href="html/contacto.html" class="enlace-footer"><i class="fa-solid fa-address-book"></i> Contacto</a></li>
+                <li><a href="html/preguntas.html" class="enlace-footer"><i class="fa-solid fa-question"></i> Preguntas Frecuentes</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <!-- script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

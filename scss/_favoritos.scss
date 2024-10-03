@@ -1,0 +1,81 @@
+
+@use "variables" as *;
+
+/* Sección de favoritos */
+.contenedor-main-favoritos {
+    background: linear-gradient(to bottom, $color_gradient1, $color_gradient2);
+    padding-bottom: 20px;
+
+    .banner-favoritos{
+        width: 100%;
+        overflow: hidden; /* evita que la imagen desborde el contenedor */
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .articulo-favoritos {
+        background-color: $color_fondo-txt;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        margin: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        flex-wrap: wrap;
+
+        .imagen-articulo {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .detalles-articulo {
+            flex: 1;
+            margin-left: 20px;
+            min-width: 150px; /* Asegura que haya un ancho mínimo */
+            
+            .nombre-articulo {
+                font-size: 1.5em;
+                color: #333;
+            }
+
+            .precio-articulo {
+                font-size: 1.2em;
+                color: #888;
+            }
+        }
+
+        .acciones-articulo {
+            display: flex;
+            flex-direction: column; /* Coloca los botones en columna */
+            gap: 5px; /* Espacio entre los botones */
+
+            .boton-comprar, .boton-eliminar {
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1em;
+            }
+
+            .boton-comprar {
+                background-color: #000f389d;
+                color: $color_fondo-txt;
+            }
+
+            .boton-eliminar {
+                background-color: #7a2a34cc;
+                color: $color_fondo-txt;
+            }
+        }
+    }
+}
+
+

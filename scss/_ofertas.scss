@@ -1,0 +1,104 @@
+
+// variables
+@use "variables" as *;
+
+// mixins
+
+// Definición del Mixin
+@mixin estilo-articulo {
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ajusta la imagen para que se vea completa, si es más grande que el contenedor */
+    }
+
+    p {
+        font-size: 1rem;
+        margin: 10px 0; /* Margen para el párrafo */
+    }
+}
+
+
+/* estilo de ofertas */
+.ofertas {
+    margin: 2% 5%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    grid-template-rows: auto; /* 5 filas dinámicas */
+    grid-template-areas: 
+      "titulo_o titulo_o titulo_o titulo_o titulo_o"
+      "oferta-destacada oferta-destacada oferta-destacada oferta-destacada oferta-destacada"
+      "oferta_1 oferta_2 oferta_3 oferta_4 oferta_5"
+      "oferta_6 oferta_7 oferta_8 oferta_9 oferta_10"
+      "oferta_11 oferta_12 oferta_13 oferta_14 oferta_15";
+    gap: 20px;
+    background-color: $color_fondo-txt;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+    .oferta-destacada {
+        grid-area: oferta-destacada;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover; /* Ajusta la imagen para que se vea completa, si es más grande que el contenedor */
+        }
+
+    }
+
+    .oferta_1, .oferta_2, .oferta_3, .oferta_4, .oferta_5,
+    .oferta_6, .oferta_7, .oferta_8, .oferta_9, .oferta_10,
+    .oferta_11, .oferta_12, .oferta_13, .oferta_14, .oferta_15 {
+        @include estilo-articulo; // Aplicando el mixin a cada oferta
+    }
+
+    .titulo_o {
+        grid-area: titulo_o; /* nombramos a todas las áreas para ubicarlas con grid */
+        font-family: $letra_ofertas;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 4rem;
+    }
+}
+
+/* Media Query para pantallas más pequeñas reponsivos generales */
+@media (max-width: 480px) {
+    
+    .ofertas {
+      grid-template-columns: 1fr; /* Una columna para pantallas móviles */
+      grid-template-areas: 
+        "titulo_o"
+        "oferta-destacada"
+        "oferta_1"
+        "oferta_2"
+        "oferta_3"
+        "oferta_4"
+        "oferta_5"
+        "oferta_6"
+        "oferta_7"
+        "oferta_8"
+        "oferta_9"
+        "oferta_10"
+        "oferta_11"
+        "oferta_12"
+        "oferta_13"
+        "oferta_14"
+        "oferta_15";
+    }
+  
+    /* Centramos el texto y botones en móviles */
+    .articulo {
+      text-align: center;
+    }
+
+    .articulos_1, .articulos_2, .articulos_3, 
+    .articulos_4, .articulos_5, .articulos_6 {
+        height: auto; /* Permite que la altura se ajuste al contenido */
+    }
+
+    h2 a {
+        font-size: 2rem;
+    }
+   
+}
