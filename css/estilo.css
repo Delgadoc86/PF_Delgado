@@ -144,6 +144,12 @@
   font-size: 1rem;
   margin: 10px 0; /* Margen para el párrafo */
 }
+.ofertas .oferta_1 .precio, .ofertas .oferta_2 .precio, .ofertas .oferta_3 .precio, .ofertas .oferta_4 .precio, .ofertas .oferta_5 .precio,
+.ofertas .oferta_6 .precio, .ofertas .oferta_7 .precio, .ofertas .oferta_8 .precio, .ofertas .oferta_9 .precio, .ofertas .oferta_10 .precio,
+.ofertas .oferta_11 .precio, .ofertas .oferta_12 .precio, .ofertas .oferta_13 .precio, .ofertas .oferta_14 .precio, .ofertas .oferta_15 .precio {
+  font-size: 1.3rem;
+  color: rgb(36, 36, 36);
+}
 .ofertas .titulo_o {
   grid-area: titulo_o; /* nombramos a todas las áreas para ubicarlas con grid */
   font-family: "Bungee Tint", sans-serif;
