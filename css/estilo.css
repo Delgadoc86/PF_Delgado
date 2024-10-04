@@ -156,9 +156,25 @@
   display: flex;
   justify-content: center;
   text-decoration: none;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
+/*Media Query tablets*/
+@media (max-width: 1024px) and (min-width: 600px) {
+  .ofertas {
+    grid-template-columns: repeat(3, 1fr); /* Cambia a 3 columnas en lugar de 5 */
+    grid-template-areas: "titulo_o titulo_o titulo_o" "oferta-destacada oferta-destacada oferta-destacada" "oferta_1 oferta_2 oferta_3" "oferta_4 oferta_5 oferta_6" "oferta_7 oferta_8 oferta_9" "oferta_10 oferta_11 oferta_12" "oferta_13 oferta_14 oferta_15"; /* Ajusta las áreas para 3 columnas */
+    gap: 25px; /* Reduce el espacio entre las ofertas para un diseño más compacto */
+    margin: 5%; /* Ajusta los márgenes */
+    padding: 10px; /* Reduce el padding para mayor ajuste */
+  }
+  .titulo_o {
+    font-size: 3rem; /* Ajusta el tamaño de fuente del título para tablets */
+  }
+  .oferta-destacada img {
+    object-fit: cover; /* Mantiene la imagen ajustada al contenedor */
+  }
+}
 /* Media Query para pantallas más pequeñas reponsivos generales */
 @media (max-width: 480px) {
   .ofertas {
