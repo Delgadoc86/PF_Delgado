@@ -36,7 +36,7 @@ li {
     background-image: url("../img/portada.jpg"); /* Imagen de fondo para la portada */
     background-size: cover; /* Hace que la imagen cubra todo el contenedor */
     background-position: center; /* Centra la imagen en el contenedor */
-    height: 50rem; /* Altura del contenedor */
+    height: 40rem; /* Altura del contenedor */
     width: 100%; /* Ancho del contenedor */
 
     &::before {
@@ -56,6 +56,18 @@ li {
         font-size: 8rem; /* Tamaño del texto */
         text-align: center; /* Centra el texto horizontalmente */
         padding-top: 10%; /* Espacio superior para centrar el texto verticalmente */
+        position: relative; /* Asegura que el texto esté posicionado sobre el pseudo-elemento */
+        z-index: 2; /* Asegura que el texto esté por encima del gradiente */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    }
+    .descripcion-web{
+        color: $color_fondo-txt;
+        font-family: $letra_titulos;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
         position: relative; /* Asegura que el texto esté posicionado sobre el pseudo-elemento */
         z-index: 2; /* Asegura que el texto esté por encima del gradiente */
     }
@@ -398,6 +410,10 @@ li {
             "articulo5"
             "articulo6"
             "articulo7";
+    }
+    .titulo_ofertas{
+        align-items: center;
+        font-size: 2rem;
     }
 
     /* pie de pagina (footer) */
